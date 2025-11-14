@@ -1,23 +1,24 @@
-{% extends 'usuarios/base.html' %} 
-{% block conteudo %}
+{% extends 'usuarios/base.html' %}
 
-<div class="container">
-    <h1>Usuários Cadastrados:</h1>
-    <table class="table table-bordered table-striped">         
+{% block content %}
+<div class="container table-container">
+    <h2>Lista de Usuários Cadastrados</h2>
+
+    <table>
         <tr>
-            <th>id</th>
-            <th>nome</th>
-            <th>idade</th>
+            <th>Nome</th>
+            <th>Idade</th>
         </tr>
-        {% for usuario in usuarios %}
-         <tr>
-            <td>{{usuario.id_usuario}}</td>
-            <td>{{usuario.nome}}</td>
-            <td>{{usuario.idade}}</td>
-         </tr>
-         {% endfor %}
 
+        {% for u in usuarios %}
+        <tr>
+            <td>{{ u.nome }}</td>
+            <td>{{ u.idade }}</td>
+        </tr>
+        {% endfor %}
     </table>
+
+    <a href="/" class="voltar-btn">Voltar</a>
 </div>
 {% endblock %}
-  
+

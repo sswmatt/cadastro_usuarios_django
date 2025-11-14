@@ -1,20 +1,23 @@
-from django.shortcuts import render
-from .models import Usuario
 
-def home(request):  
-    return render(request,'usuarios/home.html')
+from django.shortcuts import render, redirect
+from .models import Usuarios
 
-def usuarios(request):
-    novo_usuario = Usuario()
-    novo_usuario.nome = request.POST.get('nome')
-    novo_usuario.idade = request.POST.get('idade')
-    novo_usuario.save()
+def home(request):
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        idade = request.POST.get('idade')
 
-    usuarios = {
-        'usuarios': Usuario.objects.all()
-        
-         }
-    return render(request,'usuarios/usuarios.html',usuarios)
+        if nome and idade:
+            Usuarios.objects.create(nome=nome, idade=idade)
+            return redirect('lista_usuarios')
+
+    return render(request, 'usuarios/home.html')
+
+
+def lista_usuarios(request):
+    usuarios = Usuarios.objects.all()
+    return render(request, 'usuarios/lista.html', {'usuarios': usuarios})
+
      
    
     

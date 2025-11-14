@@ -1,0 +1,9 @@
+<h2>Lista de Usuários</h2>
+
+<ul>
+    {% for user in usuarios %}
+        <li>{{ user.nome }} — {{ user.idade }} anos</li>
+    {% endfor %}
+</ul>
+
+<a href="/">Voltar</a>

@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-@af!+b!pz%=m6)iecfu9t$3k9$#ug7rzdq53rdtoi5^d!&*)s-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'seu-projeto.onrender.com']
+
 
 
 # Application definition
@@ -73,12 +74,20 @@ WSGI_APPLICATION = 'projeto_cad_usuarios.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#  'default': {
+#      'ENGINE': 'django.db.backends.sqlite3',
+#      'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#  }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
     }
 }
+
 
 
 # Password validation

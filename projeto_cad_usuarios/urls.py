@@ -1,11 +1,9 @@
 
-from django.urls import path
-from app_cad_usuarios import views
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-    #rota, view responsavel, nome de referencia
-    #usuarios.com
-    path('',views.home,name='home'),
-    path('usuarios/',views.usuarios,name='listagem_usuarios')
-    
+    path('admin/', admin.site.urls),
+    path('', include('app_cad_usuarios.urls')),
 ]
+
