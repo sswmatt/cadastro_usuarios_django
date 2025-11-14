@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  {% load static %}
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Meu Site{% endblock %}</title>
+    <title>{% block title %}Cadastre-me!{% endblock %}</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/site.css' %}">
@@ -14,12 +14,17 @@
 </head>
 
 <body>
+    <!-- Acessibilidade -->
     <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
 
-    <button onclick="toggleContraste()">Alto Contraste</button>
+    <!-- Botões do topo -->
+    <div class="top-buttons">
+        <button onclick="toggleContraste()" class="btn-contraste">Alto Contraste</button>
+        <button onclick="toggleDarkMode()" class="btn-dark">☾ Tema Dark</button>
+    </div>
 
     <header>
-        <h1>Meu Site</h1>
+        <h1 class="titulo">CADASTRE-ME!</h1>
     </header>
 
     <main id="conteudo-principal">

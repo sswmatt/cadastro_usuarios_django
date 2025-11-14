@@ -30,10 +30,6 @@ ALLOWED_HOSTS = [
     'localhost',
     'cadastro-usuarios-django.onrender.com'
 ]
-
-
-
-
 # Application definition
 
 INSTALLED_APPS = [
