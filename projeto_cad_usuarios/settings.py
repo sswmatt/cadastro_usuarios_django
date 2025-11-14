@@ -127,12 +127,12 @@ USE_TZ = True
 
 import os 
 
+
 STATIC_URL = '/static/'
-STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 STATICFILES_DIRS = [
-    BASE_DIR / "app_cad_usuarios" / "static",
+    BASE_DIR / "static",
 ]
 
 
