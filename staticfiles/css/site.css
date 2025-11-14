@@ -1,0 +1,40 @@
+/* Tema padrão */
+body {
+    background-color: #ffffff;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Botões */
+button {
+    padding: 8px 14px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-dark {
+    background: #222;
+    color: white;
+}
+
+.btn-contraste {
+    background: #ffcc00;
+    color: #000;
+}
+
+/* Tema Dark */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #e4e4e4 !important;
+}
+
+/* Alto contraste */
+body.contraste {
+    background-color: black !important;
+    color: yellow !important;
+}
